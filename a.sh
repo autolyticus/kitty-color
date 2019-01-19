@@ -8,5 +8,5 @@ xargs -0 mkdir -p < dirs.txt
 
 for i in $files; do
     echo "$i"
-    cat "$i" | sed 's|\# |\#: |' | sed 's|=||' | grep -v foreground_bold > ${i//termite/kitty}
+    cat "$i" | sed 's|\# |\#: |' | sed 's|=||' | grep -v foreground_bold | grep -v '\[color\]' > ${i//termite/kitty}
 done
