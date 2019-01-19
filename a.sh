@@ -1,6 +1,6 @@
 #!/bin/bash
 CMD='sed '"'"'s|\# |\#: |'"'"' | sed '"'"'s|=||'"'"' | grep -v foreground_bold | grep -v '"'"'[color]'"'"''
-files="$(find -regex '.*.config')"
+files="$(find -regex '.*\.config')"
 
 find termite-colors -type d -print0 >dirs.txt
 sed -i 's/termite/kitty/g' dirs.txt
