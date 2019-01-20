@@ -46,6 +46,7 @@ getCurrentTheme() {
 if [ -z "$@" ]; then
 	echo -n 'Current Theme: '
 	getCurrentTheme
+    echo 'To change theme, run kitty-color with set argument'
 	exit 0
 fi
 
