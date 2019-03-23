@@ -50,7 +50,7 @@ if [ -z "$@" ]; then
 	exit 0
 fi
 
-UserColor=$((cd "$COLORDIR" || exit; find -type f -name '*.config')  | fzf --prompt='Choose theme: ')
+UserColor=$( (cd "$COLORDIR" || exit; find -type f -name '*.config')  | fzf --prompt='Choose theme: ')
 if [ -z "$UserColor" ]; then
     echo "Please enter valid color"
     exit 1
